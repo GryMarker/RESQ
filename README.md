@@ -1,6 +1,6 @@
 # RESQ-LINK - Emergency Dispatch System
 
-A modern, responsive frontend-only MVP for Tuguegarao City's emergency dispatch system built with React, TypeScript, and Bootstrap.
+A modern, responsive system for Tuguegarao City's emergency dispatch system built with React, TypeScript, and Bootstrap.
 
 ## 🚀 Features
 
