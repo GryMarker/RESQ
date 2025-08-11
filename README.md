@@ -20,32 +20,33 @@ A modern, responsive frontend-only MVP for Tuguegarao City's emergency dispatch 
 - **Context API** for state management
 - **CSS3** with custom styling
 
-## 📦 Installation
+## 🚀 Getting Started
 
-1. **Clone or create the project:**
-```bash
-npm create vite@latest resq-link-web -- --template react-ts
-cd resq-link-web
-```
+1.  **Clone the repository:**
+    ```bash
+    git clone https://github.com/GryMarker/RESQ.git
+    cd RESQ
+    ```
 
-2. **Install dependencies:**
-```bash
-npm install
-npm install react-router-dom react-bootstrap bootstrap
-npm install -D eslint prettier eslint-plugin-react @types/react-router-dom
-```
+2.  **Install dependencies:**
+    ```bash
+    npm install
+    ```
 
-3. **Set up environment variables:**
-```bash
-cp .env.example .env
-```
+3.  **Set up environment variables:**
 
-4. **Start the development server:**
-```bash
-npm run dev
-```
+    Copy the example `.env.example` file to a new `.env` file:
+    ```bash
+    cp .env.example .env
+    ```
+    Update the `.env` file with your specific configuration, such as API keys.
 
-The application will be available at `http://localhost:3000`
+4.  **Run the development server:**
+    ```bash
+    npm run dev
+    ```
+
+The application will be running at `http://localhost:5173`.
 
 ## 🔧 Environment Configuration
 
