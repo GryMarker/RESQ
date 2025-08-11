@@ -1,0 +1,99 @@
+.incident-filters {
+  padding: 0;
+}
+
+.incident-filters .form-label {
+  font-weight: 600;
+  color: #495057;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.incident-filters .form-control,
+.incident-filters .form-select {
+  border: 1px solid #dee2e6;
+  border-radius: 0.375rem;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+}
+
+.incident-filters .form-control:focus,
+.incident-filters .form-select:focus {
+  border-color: var(--resq-primary);
+  box-shadow: 0 0 0 0.2rem rgba(139, 195, 74, 0.25);
+}
+
+.incident-filters .form-control::placeholder {
+  color: #6c757d;
+  font-style: italic;
+}
+
+.incident-filters .btn-outline-secondary {
+  border-color: #6c757d;
+  color: #6c757d;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.incident-filters .btn-outline-secondary:hover {
+  background-color: #6c757d;
+  border-color: #6c757d;
+  color: white;
+}
+
+.incident-filters .btn-outline-secondary i {
+  font-size: 0.8rem;
+}
+
+/* Form group spacing */
+.incident-filters .form-group {
+  margin-bottom: 1rem;
+}
+
+.incident-filters .form-group:last-of-type {
+  margin-bottom: 1.5rem;
+}
+
+/* Custom styling for date inputs */
+.incident-filters input[type="date"] {
+  position: relative;
+}
+
+.incident-filters input[type="date"]::-webkit-calendar-picker-indicator {
+  color: var(--resq-primary);
+  cursor: pointer;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991.98px) {
+  .incident-filters {
+    margin-bottom: 1rem;
+  }
+}
+
+/* Animation for clear button */
+.incident-filters .btn-outline-secondary {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Custom select arrow */
+.incident-filters .form-select {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m1 6 7 7 7-7'/%3e%3c/svg%3e");
+}
+
+.incident-filters .form-select:focus {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%238bc34a' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m1 6 7 7 7-7'/%3e%3c/svg%3e");
+}

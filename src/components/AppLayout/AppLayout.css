@@ -1,0 +1,69 @@
+.app-layout {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f8f9fa;
+}
+
+.main-content {
+  margin-top: 60px;
+  transition: margin-left 0.3s ease;
+  min-height: calc(100vh - 60px);
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.main-content.sidebar-expanded {
+  margin-left: 250px;
+}
+
+.main-content.sidebar-collapsed {
+  margin-left: 60px;
+}
+
+.content-container {
+  padding: 1.5rem;
+  max-width: none;
+  flex-grow: 1;
+  display: flex;
+}
+
+/* Mobile responsiveness */
+.content-container {
+  width: 100%;
+}
+
+@media (max-width: 991.98px) {
+  .main-content.sidebar-expanded,
+  .main-content.sidebar-collapsed {
+    margin-left: 0;
+  }
+  
+  .content-container {
+    padding: 1rem;
+  }
+}
+
+/* Smooth transitions */
+.main-content,
+.sidebar {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Content area styling */
+.content-container {
+  background: transparent;
+}
+
+/* Ensure content doesn't get cut off */
+.main-content {
+  /* overflow-x: auto; */
+}
+
+/* Print styles */
+@media print {
+  .main-content {
+    margin-left: 0 !important;
+    margin-top: 0 !important;
+  }
+}

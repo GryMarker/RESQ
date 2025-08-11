@@ -1,0 +1,184 @@
+.incidents-page {
+  padding: 0;
+}
+
+.page-header {
+  background: linear-gradient(135deg, rgba(139, 195, 74, 0.1) 0%, rgba(76, 175, 80, 0.1) 100%);
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.page-title {
+  color: #212529;
+  font-weight: 700;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.page-title i {
+  color: var(--resq-primary);
+}
+
+.page-subtitle {
+  font-size: 1.1rem;
+  margin-bottom: 0;
+}
+
+.filters-card {
+  border: 1px solid #dee2e6;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.filters-card .card-header {
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #dee2e6;
+  padding: 1rem 1.25rem;
+}
+
+.filters-card .card-header h5 {
+  color: #495057;
+  font-weight: 600;
+}
+
+.filters-card .card-header i {
+  color: var(--resq-primary);
+}
+
+.incidents-card {
+  border: 1px solid #dee2e6;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.incidents-card .card-header {
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #dee2e6;
+  padding: 1rem 1.25rem;
+}
+
+.incidents-card .card-header h5 {
+  color: #495057;
+  font-weight: 600;
+}
+
+.incidents-stats {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.incidents-stats .badge {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.375rem 0.75rem;
+  border-radius: 0.375rem;
+}
+
+.btn-resq-primary {
+  background: linear-gradient(135deg, var(--resq-primary) 0%, var(--resq-secondary) 100%);
+  border: none;
+  border-radius: 0.375rem;
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+  color: white;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(139, 195, 74, 0.3);
+}
+
+.btn-resq-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(139, 195, 74, 0.4);
+  background: linear-gradient(135deg, var(--resq-primary-dark) 0%, var(--resq-secondary) 100%);
+  color: white;
+}
+
+.btn-resq-primary:active {
+  transform: translateY(0);
+}
+
+.btn-resq-primary i {
+  color: white;
+}
+
+/* Responsive design */
+@media (max-width: 991.98px) {
+  .page-header {
+    padding: 1rem;
+  }
+  
+  .page-title {
+    font-size: 1.5rem;
+  }
+  
+  .incidents-stats {
+    flex-wrap: wrap;
+    margin-top: 0.5rem;
+  }
+  
+  .incidents-stats .badge {
+    font-size: 0.7rem;
+    padding: 0.25rem 0.5rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .page-header .row {
+    text-align: center;
+  }
+  
+  .page-header .col:last-child {
+    margin-top: 1rem;
+  }
+  
+  .incidents-stats {
+    justify-content: center;
+  }
+}
+
+/* Card animations */
+.filters-card,
+.incidents-card {
+  transition: box-shadow 0.2s ease;
+}
+
+.filters-card:hover,
+.incidents-card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Loading state */
+.incidents-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem;
+  color: #6c757d;
+}
+
+.incidents-loading .spinner-border {
+  margin-right: 1rem;
+}
+
+/* Empty state */
+.incidents-empty {
+  text-align: center;
+  padding: 3rem;
+  color: #6c757d;
+}
+
+.incidents-empty i {
+  font-size: 3rem;
+  color: #dee2e6;
+  margin-bottom: 1rem;
+}
+
+.incidents-empty h5 {
+  color: #6c757d;
+  margin-bottom: 0.5rem;
+}
+
+.incidents-empty p {
+  margin-bottom: 0;
+}

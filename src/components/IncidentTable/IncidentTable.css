@@ -1,0 +1,274 @@
+.incident-table-container {
+  overflow-x: auto;
+}
+
+.incident-table {
+  margin-bottom: 0;
+  font-size: 0.9rem;
+  width: 100%; /* Ensure table has minimum width */
+}
+
+.incident-table thead th {
+  background-color: #f8f9fa;
+  border-bottom: 2px solid #dee2e6;
+  font-weight: 600;
+  color: #495057;
+  padding: 1rem 0.75rem;
+  white-space: nowrap;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.incident-table tbody td {
+  padding: 0.75rem;
+  vertical-align: middle;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.incident-row {
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.incident-row:hover {
+  background-color: rgba(139, 195, 74, 0.05);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.incident-id {
+  font-family: 'Courier New', monospace;
+  font-weight: 600;
+  color: var(--resq-primary);
+  font-size: 0.85rem;
+}
+
+.incident-type {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+}
+
+.incident-type i {
+  width: 16px;
+  text-align: center;
+}
+
+.incident-title strong {
+  color: #212529;
+  font-size: 0.9rem;
+  line-height: 1.3;
+}
+
+.incident-description {
+  font-size: 0.8rem;
+  line-height: 1.2;
+  margin-top: 0.25rem;
+}
+
+.incident-location {
+  line-height: 1.3;
+}
+
+.incident-location div {
+  font-weight: 500;
+  color: #212529;
+}
+
+.incident-location small {
+  font-size: 0.75rem;
+  line-height: 1.2;
+}
+
+.assigned-responder {
+  line-height: 1.3;
+}
+
+.assigned-responder div {
+  font-weight: 500;
+  color: #212529;
+}
+
+.assigned-responder small {
+  font-size: 0.75rem;
+  color: #6c757d;
+}
+
+.incident-time {
+  line-height: 1.3;
+  text-align: right;
+}
+
+.incident-time div {
+  font-weight: 500;
+  color: #212529;
+  font-size: 0.85rem;
+}
+
+.incident-time small {
+  font-size: 0.75rem;
+  color: #6c757d;
+}
+
+/* Status badges */
+.badge {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.375rem 0.75rem;
+  border-radius: 0.375rem;
+}
+
+.status-new {
+  background-color: #dc3545 !important;
+}
+
+.status-assigned {
+  background-color: #ffc107 !important;
+  color: #212529 !important;
+}
+
+.status-en-route {
+  background-color: #0d6efd !important;
+}
+
+.status-on-scene {
+  background-color: #198754 !important;
+}
+
+.status-resolved {
+  background-color: #6c757d !important;
+}
+
+/* Loading and empty states */
+.incidents-loading,
+.incidents-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 1rem;
+  color: #6c757d;
+}
+
+.incidents-loading {
+  flex-direction: row;
+}
+
+.incidents-empty i {
+  font-size: 3rem;
+  color: #dee2e6;
+  margin-bottom: 1rem;
+}
+
+.incidents-empty h5 {
+  color: #6c757d;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.incidents-empty p {
+  margin-bottom: 0;
+  font-size: 0.9rem;
+}
+
+/* Responsive design - Less aggressive hiding */
+@media (max-width: 991.98px) {
+  .incident-table {
+    font-size: 0.8rem;
+    min-width: 700px;
+  }
+  
+  .incident-table thead th {
+    padding: 0.75rem 0.5rem;
+    font-size: 0.75rem;
+  }
+  
+  .incident-table tbody td {
+    padding: 0.5rem;
+  }
+  
+  /* Only hide descriptions and small text on medium screens */
+  .incident-description,
+  .incident-location small,
+  .assigned-responder small,
+  .incident-time small {
+    display: none;
+  }
+  
+  .incident-time {
+    text-align: left;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .incident-table {
+    min-width: 600px;
+  }
+  
+  /* Hide less critical columns on small screens */
+  .incident-table thead th:nth-child(7), /* Assigned To */
+  .incident-table tbody td:nth-child(7),
+  .incident-table thead th:nth-child(9), /* Updated */
+  .incident-table tbody td:nth-child(9) {
+    display: none;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .incident-table {
+    font-size: 0.75rem;
+    min-width: 500px;
+  }
+  
+  /* Hide additional columns on very small screens */
+  .incident-table thead th:nth-child(5), /* Priority */
+  .incident-table tbody td:nth-child(5) {
+    display: none;
+  }
+}
+
+/* Table striping */
+.incident-table tbody tr:nth-of-type(odd) {
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
+.incident-table tbody tr:nth-of-type(odd):hover {
+  background-color: rgba(139, 195, 74, 0.05);
+}
+
+/* Smooth animations */
+.incident-row,
+.badge {
+  transition: all 0.2s ease;
+}
+
+/* Priority badge colors */
+.badge.bg-light {
+  color: #495057 !important;
+  background-color: #f8f9fa !important;
+  border: 1px solid #dee2e6;
+}
+
+.badge.bg-warning {
+  background-color: #ffc107 !important;
+}
+
+.badge.bg-danger {
+  background-color: #dc3545 !important;
+}
+
+.badge.bg-dark {
+  background-color: #212529 !important;
+}
+
+/* Ensure table is visible */
+.incident-table-container {
+  background-color: white;
+  border-radius: 0.375rem;
+}
+
+.incident-table {
+  background-color: white;
+  color: #212529;
+}
